@@ -6,6 +6,10 @@ __pycache__/
 # C extensions
 *.so
 
+# my ignorede folders
+.vosk_models
+vosk_models/
+
 # Distribution / packaging
 .Python
 build/
