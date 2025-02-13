@@ -25,7 +25,7 @@ import deepseek_local
 import skills
 
 # Настройки
-MODEL_PATH = "vosk/small-model-ru"  # Путь к модели Vosk
+MODEL_PATH = "./vosk_models/small-ru"  # Путь к модели Vosk
 CHUNK = 16000  # Размер блока аудио данных
 FORMAT = pyaudio.paInt16  # Формат аудио
 CHANNELS = 1  # Количество каналов
