@@ -141,14 +141,16 @@ def init_vosk():
     model = vosk.Model(MODEL_PATH)
     recognizer = vosk.KaldiRecognizer(model, RATE)
 
+    # TODO: автоматизировать процесс запуска сервера ollama
+    # # Запускаем сервер с нейронкой через командную строку
+    # # это нужно сделать в cmd
+    # os.system('ollama serve')
+
     # Начало записи аудио в отдельном потоке
     import threading
     audio_thread = threading.Thread(target=record_audio, args=(audio_queue,))
     audio_thread.daemon = True
     audio_thread.start()
-
-    # Запускаем сервер с нейронкой
-    os.system('ollama serve')
 
     recognize_speech(recognizer)
 
